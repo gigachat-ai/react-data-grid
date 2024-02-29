@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Demo
-
+https://react-data-grid.pages.dev/
 
 ## Getting started
 
@@ -14,3 +14,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 5. Sign in with the credentials provided
 6. Input the `http://localhost:3000` in the developer bar and click the submit icons (Paper plane icon)
 
+## Known issues
+When resizing the window, the grid throws an error. Just close it and continue using the app.

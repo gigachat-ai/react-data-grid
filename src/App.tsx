@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { giga } from 'gigachat';
 import DataGrid from 'react-data-grid';
+import {GithubButton} from "./GithubButton";
 
 // Define the columns for the data grid
 const columns = [
@@ -44,9 +45,13 @@ function App() {
 
   return (
       <div className="App">
+        <div className="flex items-center justify-between space-x-2 m-2">
+          <h1 className="text-2xl font-bold">React Data Grid</h1>
+          <GithubButton />
+        </div>
         <div>
           {transactions && transactions.length > 0 ? (
-                  <DataGrid columns={columns} rows={transactions} />
+                  <DataGrid columns={columns} rows={transactions} className="h-full" />
               ) : (
                     <p>Loading...</p>
                 )}
