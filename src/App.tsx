@@ -3,24 +3,21 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { giga } from 'gigachat';
 import DataGrid from 'react-data-grid';
-import {GithubButton} from "./GithubButton";
+import {GithubButton} from "./components/GithubButton";
 
 // Define the columns for the data grid
 const columns = [
   {
     key: 'Description',
     name: 'Description',
-    sortable: true,
   },
   {
     key: 'Amount',
     name: 'Amount',
-    sortable: true,
   },
   {
     key: 'TransactionBaseType',
     name: 'Type',
-    sortable: true,
   }
 ];
 
@@ -56,7 +53,9 @@ function App() {
         </div>
         <div>
           {transactions && transactions.length > 0 ? (
-                  <DataGrid columns={columns} rows={transactions} />
+                  <DataGrid columns={columns} rows={transactions} style={{
+                    height: '100%'
+                  }} />
               ) : (
                     <p>Loading...</p>
                 )}
