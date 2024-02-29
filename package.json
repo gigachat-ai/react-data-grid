@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "dayjs": "^1.11.10",
     "gigachat": "^1.0.17",
     "react-data-grid": "^7.0.0-beta.42"
   }
