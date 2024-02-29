@@ -45,13 +45,18 @@ function App() {
 
   return (
       <div className="App">
-        <div className="flex items-center justify-between space-x-2 m-2">
-          <h1 className="text-2xl font-bold">React Data Grid</h1>
+        <div style={{
+          display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            padding: '0.2rem',
+        }}>
+          <h2>React Data Grid</h2>
           <GithubButton />
         </div>
         <div>
           {transactions && transactions.length > 0 ? (
-                  <DataGrid columns={columns} rows={transactions} className="h-full" />
+                  <DataGrid columns={columns} rows={transactions} />
               ) : (
                     <p>Loading...</p>
                 )}
