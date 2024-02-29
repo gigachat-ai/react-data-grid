@@ -24,7 +24,7 @@ const columns = [
 function App() {
   const [transactions, setTransactions] = useState([]);
 
-  giga.platform.init();
+  giga.platform.init().then(() => giga.platform.initSession())
 
   useEffect(() => {
     async function getTransactions() {
